@@ -1,4 +1,5 @@
 using UnityEngine;
+
 namespace TopDown.Movement
 {
     [RequireComponent(typeof(Rigidbody2D))]
@@ -7,7 +8,7 @@ namespace TopDown.Movement
         [SerializeField] private float movementSpeed;
         private Rigidbody2D body;
         protected Vector3 currentInput;
-    
+
         private void Awake()
         {
             body = GetComponent<Rigidbody2D>();
@@ -17,9 +18,6 @@ namespace TopDown.Movement
         {
             body.linearVelocity = movementSpeed * currentInput * Time.fixedDeltaTime;
         }
-    
-   
     }
-
-
 }
+
